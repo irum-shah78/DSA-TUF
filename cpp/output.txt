@@ -1,0 +1,2 @@
+Value inside function: 106
+Value outside function: 106
