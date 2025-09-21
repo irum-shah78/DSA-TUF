@@ -74,7 +74,7 @@ void updateValue(int num)
     cout << num << endl;
     num += 5;
     cout << num << endl;
-}
+} 
 
 // Only thing that will be changed in case of pass by reference is to add "&"
 void updateValueStr(string &s)
@@ -83,7 +83,8 @@ void updateValueStr(string &s)
     cout << s << endl;
 }
 
-void arrayRef(int arr[], int n){
+void arrayRef(int arr[], int n)
+{
     arr[0] += 100;
     cout << "Value inside function: " << arr[0] << endl;
 }
