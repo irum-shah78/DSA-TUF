@@ -78,6 +78,31 @@ void pattern6(int n)
         cout << endl;
     }
 }
+
+// pattern 7 to print stars
+void pattern7(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        // spaces
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        // stars
+        for (int j = 0; j < 2 * i + 1; j++)
+        {
+            cout << "*";
+        }
+        // spaces
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int n;
@@ -87,7 +112,8 @@ int main()
     // pattern3(n);
     // pattern4(n);
     // pattern5(n);
-    pattern6(n);
+    // pattern6(n);
+    pattern7(n);
 
     // For the test cases, backend looks like this for online compiler.
     // int t;
