@@ -238,6 +238,20 @@ void pattern15(int n)
         cout << endl;
     }
 }
+
+// pattern 15 to print characters
+void pattern16(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        char ch = 'A' + i;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int n;
@@ -255,7 +269,8 @@ int main()
     // pattern12(n);
     // pattern13(n);
     // pattern14(n);
-    pattern15(n);
+    // pattern15(n);
+    pattern16(n);
 
     // For the test cases, backend looks like this for online compiler.
     // int t;
