@@ -252,6 +252,184 @@ void pattern16(int n)
         cout << endl;
     }
 }
+
+// pattern 17 to print characters
+void pattern17(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        // spaces
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+
+        // characters
+        char ch = 'A';
+        int breakPoint = (2 * i + 1) / 2;
+        for (int j = 1; j <= 2 * i + 1; j++)
+        {
+            cout << ch;
+            if (j <= breakPoint)
+            {
+                ch++;
+            }
+            else
+            {
+                ch--;
+            }
+        }
+
+        // spaces
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+// pattern 18 to print characters
+void pattern18(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = 'E' - i; ch <= 'E'; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
+// pattern 19 to print stars
+void pattern19(int n)
+{
+    // UPPER PART
+    int initialSpace = 0;
+    for (int i = 0; i < n; i++)
+    {
+        // stars
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "*";
+        }
+
+        // spaces
+        for (int j = 0; j < initialSpace; j++)
+        {
+            cout << " ";
+        }
+
+        // stars
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "*";
+        }
+        initialSpace += 2;
+        cout << endl;
+    }
+
+    // LOWER PART
+    initialSpace = 2 * n - 2;
+    for (int i = 1; i <= n; i++)
+    {
+        // stars
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+
+        // spaces
+        for (int j = 0; j < initialSpace; j++)
+        {
+            cout << " ";
+        }
+
+        // stars
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        initialSpace -= 2;
+        cout << endl;
+    }
+}
+
+// pattern 20 to print stars
+void pattern20(int n)
+{
+    int space = 2 * n - 2;
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        int stars = i;
+        if (i > n)
+            stars = 2 * n - i;
+        //  stars
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "*";
+        }
+
+        // spaces
+        for (int j = 1; j <= space; j++)
+        {
+            cout << " ";
+        }
+
+        // stars
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+        if (i < n)
+        {
+            space -= 2;
+        }
+        else
+        {
+            space += 2;
+        }
+    }
+}
+
+// pattern 21 to print stars
+void pattern21(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+// pattern 22 to print numbers
+void pattern22(int n)
+{
+    for (int i = 0; i < 2 * n - 1; i++)
+    {
+        for (int j = 0; j < 2 * n - 1; j++)
+        {
+            int top = i;
+            int left = j;
+            int right = (2 * n - 2) - j;
+            int bottom = (2 * n - 2) - i;
+            cout << (n - min(min(top, bottom), min(left, right)));
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int n;
@@ -270,7 +448,13 @@ int main()
     // pattern13(n);
     // pattern14(n);
     // pattern15(n);
-    pattern16(n);
+    // pattern16(n);
+    // pattern17(n);
+    // pattern18(n);
+    // pattern19(n);
+    // pattern20(n);
+    // pattern21(n);
+    pattern22(n);
 
     // For the test cases, backend looks like this for online compiler.
     // int t;
